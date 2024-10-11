@@ -3,22 +3,30 @@
 class Producto
 {
     private $nombre;
+    private $descripcion;
     private $precio;
-    private $cantidad;
+    private $stock;
+    private $categoria;
 
-    public function __construct($nombre, $precio, $cantidad)
+    public function __construct($nombre, $descripcion, $precio, $stock, $categoria)
     {
         $this->nombre = $nombre;
+        $this->descripcion = $descripcion;
         $this->precio = $precio;
-        $this->cantidad = $cantidad;
+        $this->stock = $stock;
+        $this->categoria = $categoria;
     }
 
     // Getters
 
-
     public function getNombre()
     {
         return $this->nombre;
+    }
+
+    public function getDescripcion()
+    {
+        return $this->descripcion;
     }
 
     public function getPrecio()
@@ -26,17 +34,26 @@ class Producto
         return $this->precio;
     }
 
-    public function getCantidad()
+    public function getStock()
     {
-        return $this->cantidad;
+        return $this->stock;
+    }
+
+    public function getCategoria()
+    {
+        return $this->categoria;
     }
 
     // Setters
 
-
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
+    }
+
+    public function setDescripcion($descripcion)
+    {
+        $this->descripcion = $descripcion;
     }
 
     public function setPrecio($precio)
@@ -44,9 +61,13 @@ class Producto
         $this->precio = $precio;
     }
 
-    public function setCantidad($cantidad)
+    public function setStock($stock)
     {
-        $this->cantidad = $cantidad;
+        $this->stock = $stock;
+    }
+
+    public function setCategoria($categoria)
+    {
+        $this->categoria = $categoria;
     }
 }
-
